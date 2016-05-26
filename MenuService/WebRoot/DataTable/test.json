@@ -1,0 +1,31 @@
+{
+ "draw": 1,
+  "recordsTotal": 6,
+  "recordsFiltered": 6,
+"data":[
+	{
+	"id":"2",
+	"table_No":"002",
+	"table_Volum":"20",
+	"table_Status":"0"
+	},
+	{
+	"id":"3",
+	"table_No":"003",
+	"table_Volum":"15",
+	"table_Status":"0"
+	},
+	{
+	    
+	"id":"4",
+	"table_No":"004",
+	"table_Volum":"15",
+	"table_Status":"0"
+	},
+{"id":"5","table_No":"005","table_Volum":"10","table_Status":"0"},
+{"id":"6","table_No":"006","table_Volum":"10","table_Status":"0"},
+{"id":"7","table_No":"007","table_Volum":"15","table_Status":"0"},
+{"id":"8","table_No":"008","table_Volum":"20","table_Status":"0"},
+{"id":"9","table_No":"009","table_Volum":"10","table_Status":"0"}
+]
+}

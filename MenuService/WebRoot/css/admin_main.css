@@ -1,0 +1,65 @@
+@charset "utf-8"; *{padding:0px; margin:0px; font-size:12px}
+html{*overflow-y:scroll}
+body{color:#333; padding:10px; font-size:12px;background:#fff;font-family:Verdana,Arial,Helvetica,sans-serif}
+img{border:none}
+ul,dl{list-style:none;}
+a{color:#004b8d; text-decoration:none}
+a:hover{color:#4192d9; text-decoration:none}
+.fc_red{color:#f26101}
+.fc_blue{color:#004b8d}
+.fc_gray{color:#656565}
+button, input, select{vertical-align:middle}
+button{margin-right:5px;cursor:pointer;}
+.btn1{height:22px;padding:0 6px;font-size:12px;line-height:22px;color:#333;border:1px solid #d9e8f5;background:url(../images/button_bg1.gif) repeat-x; cursor:pointer;}
+textarea{margin-left:5px!important}
+/*Download by http://www.codefans.net*/
+.mtitle{width:100%;margin:0px auto; height:29px; background:url(../images/mtitle_bg.gif) left top repeat-x; overflow:hidden; clear:both}
+.mtitle h1{width:48%; height:29px; float:left; line-height:27px; font-size:14px; font-weight:bold; text-indent:14px; letter-spacing:2px; color:#333;}
+.mtitle span{float:right;}
+table .title{color:#333;font-weight:bold;background:#d9e8f5;}
+table thead tr{height:24px;line-height:24px;}
+.tform{width:100%; margin:0 auto; border-bottom:1px solid #d9e8f5; height:26px;line-height:26px;text-align:right;}
+.tlist{width:100%; margin:7px auto 0px; font-family:Tahoma,Verdana,Arial,;  border-collapse:collapse}
+.tlist tbody tr{height:24px;line-height:24px;background:#fff;font-weight:normal;color:#333;border-bottom:1px solid #cbcbcb}
+.tlist tr td{line-height:15px;padding:6px;color:#333;}
+.tlist tfoot tr{text-align:right;}
+
+.pagelist{padding:5px 10px 10px 0}
+.pagelist a{overflow:hidden;display:inline; padding:4px;text-decoration:none; color:#333; border:1px solid #ebebeb;}
+.pagelist a:hover,.pagelist strong{border:1px solid #ffd375;color:#f26101;padding:4px;}
+
+.trueIcon {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+	*display: inline;
+	background: url(../images/base_icon.gif) no-repeat 0px 0px;
+}
+
+
+.falseIcon {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+	*display: inline;
+	background: url(../images/base_icon.gif) no-repeat 0px -60px;
+}
+
+
+.weishenheIcon {
+	width: 24px;
+	height: 24px;
+	
+	line-height: 24px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+	*display: inline;
+	background: url(../images/weishenhe.png) no-repeat 5px 5px;	
+}

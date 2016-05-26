@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!--
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <action name="index">
+            <result type="redirectAction">
+                <param name="actionName">HelloWorld</param>
+                <param name="namespace">/example</param>
+            </result>
+        </action>
+    </package>
+
+      <include file="example.xml"/>-->
+
+    <!-- Add packages here -->
+    <constant name="struts.devMode" value="true" />
+
+	<!-- 用户管理 -->
+	<package name="users"  namespace="/user" extends="struts-default" >
+		<action name="adminuser_checklogin" class="com.web.action.AdminAction" method="checklogin">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="exitSystem" class="com.web.action.AdminAction" method="exitSystem">
+			<result name="success" type="redirect">/login.jsp</result>
+		</action>
+	</package> 	
+	
+	<!-- 菜谱管理 -->
+	<package name="menus"  namespace="/menu" extends="struts-default" >
+	
+		<!-- 菜谱信息页面管理 -->
+		<action name="menuManagePage" class="com.web.action.MenuAction" method="managePage">
+			<result name="success">/menu/menu/manage_menu.jsp</result>
+		</action>
+		
+		<!-- 获得所有菜谱信息列表 -->
+		<action name="getMenuList" class="com.web.action.MenuAction" method="getMenuList">
+		</action>
+		
+		<!-- 获得所有菜谱类型 -->
+		<action name="getMenuTypeList" class="com.web.action.MenuAction" method="getMenuTypeList">
+			<result name="success">/menu/menu/add_menu.jsp</result>
+		</action>
+		
+		<!-- 检查菜名是否存在-->
+		<action name="menu_NameExist" class="com.web.action.MenuAction" method="menu_NameExist">
+		</action>
+		
+		<!-- 根据菜的类型获取菜的编号 -->
+		<action name="getMenu_No" class="com.web.action.MenuAction" method="getMenu_No">
+		</action>
+		
+		<!-- 添加菜 -->
+		<action name="addMenu" class="com.web.action.MenuAction" method="addMenu">
+		</action>
+		
+		<!-- 更新菜信息初始化界面 -->
+		<action name="updateMenuPage" class="com.web.action.MenuAction" method="updateMenuPage">
+			<result name="success">/menu/menu/update_menu.jsp</result>
+		</action>
+		
+		<!-- 更新菜信息 -->
+		<action name="updateMenu" class="com.web.action.MenuAction" method="updateMenu">
+		</action>
+		
+		<!-- 删除菜信息 -->
+		<action name="deleteMenu" class="com.web.action.MenuAction" method="deleteMenu">
+		</action>
+		
+		<!-- 上传菜图片 -->
+		<action name="uploadImage" class="com.web.action.MenuAction" method="uploadImage">
+			<result name="success">/menu/menu/update_menu.jsp</result>
+		</action>
+		
+	</package> 	
+	
+	<!-- 菜谱类型管理 -->
+	<package name="menuTypes"  namespace="/menuType" extends="struts-default" >
+	
+		<!-- 菜谱类型信息管理页面 -->
+		<action name="menuTypeManagePage" class="com.web.action.MenuTypeAction" method="managePage">
+			<result name="success">/menu/menuType/manage_menuType.jsp</result>
+		</action>
+		
+		<!-- 获取菜谱所有类型 信息-->
+		<action name="getMenuTypeList" class="com.web.action.MenuTypeAction" method="getMenuTypeList">
+		</action>
+		
+		<!-- 获取菜谱类型编号 -->
+		<action name="getMenuType_No" class="com.web.action.MenuTypeAction" method="getMenuType_No">
+		</action>
+		
+		<!-- 检查菜谱类型名称是否存在 -->
+		<action name="menuType_NameExist" class="com.web.action.MenuTypeAction" method="menuType_NameExist">
+		</action>
+		
+		<!-- 添加菜谱类型对象 -->
+		<action name="addMenuType" class="com.web.action.MenuTypeAction" method="addMenuType">
+		</action>
+		
+		<!-- 添加菜谱类型更新页面 -->
+		<action name="updateMenuTypePage" class="com.web.action.MenuTypeAction" method="updateMenuTypePage">
+			<result name="success">/menu/menuType/update_menuType.jsp</result>
+		</action>
+		
+		<!-- 更新菜谱类型 -->
+		<action name="updateMenuType" class="com.web.action.MenuTypeAction" method="updateMenuType">
+		</action>
+		
+		<!-- 删除菜谱类型 -->
+		<action name="deleteMenuType" class="com.web.action.MenuTypeAction" method="deleteMenuType">
+		</action>
+		
+	</package> 	
+	
+	<!-- 服务员信息管理 -->
+	<package name="waiters"  namespace="/waiter" extends="struts-default" >
+		
+		<!-- 服务员信息页面管理 -->
+		<action name="waiterManagePage" class="com.web.action.WaiterAction" method="managePage">
+			<result name="success">/menu/waiter/manage_waiter.jsp</result>
+		</action>
+		
+		<!-- 获取所有服务员信息列表 -->
+		<action name="getWaiterList" class="com.web.action.WaiterAction" method="getWaiterList">
+		</action>
+		
+		<!-- 添加服务员时，自动生成服务员编号 -->
+		<action name="getWaiter_No" class="com.web.action.WaiterAction" method="getWaiter_No">
+		</action>
+		
+		<!-- 添加服务员 -->
+		<action name="addWaiter" class="com.web.action.WaiterAction" method="addWaiter">
+		</action>
+		
+		<!--  准备服务员更新页面 -->
+		<action name="updateWaiterPage" class="com.web.action.WaiterAction" method="updateWaiterPage">
+			<result name="success">/menu/waiter/update_waiter.jsp</result>
+		</action>
+		
+		<!--  更新服务员信息 -->
+		<action name="updateWaiter" class="com.web.action.WaiterAction" method="updateWaiter">
+		</action>
+		
+		<!--  删除服务员 -->
+		<action name="deleteWaiter" class="com.web.action.WaiterAction" method="deleteWaiter">
+		</action>
+		
+	</package>
+	
+	<!-- 餐桌信息管理 -->
+	<package name="tables"  namespace="/table" extends="struts-default" >
+		<!-- 餐桌信息页面管理 -->
+		<action name="tablesManagePage" class="com.web.action.TablesAction" method="managePage">
+			<result name="success">/menu/table/manage_table.jsp</result>
+		</action>
+		
+		<!-- 获取所有餐桌信息列表 -->
+		<action name="getTablesList" class="com.web.action.TablesAction" method="getTablesList">
+		</action>
+		
+		<!-- 获取所有餐桌信息列表,为初始化桌子信息准备数据 -->
+		<action name="getTableList" class="com.web.action.TablesAction" method="getTableList">
+			<result name="success">/qian.jsp</result>
+		</action>
+		
+		<!-- 添加餐桌时，自动生成餐桌编号 -->
+		<action name="getTable_No" class="com.web.action.TablesAction" method="getTable_No">
+		</action>
+		
+		<!-- 添加餐桌-->
+		<action name="addTable" class="com.web.action.TablesAction" method="addTable">
+		</action>
+		
+		<!--  准备餐桌更新页面 -->
+		<action name="updateTablePage" class="com.web.action.TablesAction" method="updateTablePage">
+			<result name="success">/menu/table/update_table.jsp</result>
+		</action>
+		
+		<!--  更新餐桌信息 -->
+		<action name="updateTable" class="com.web.action.TablesAction" method="updateTable">
+		</action>
+		
+		<!--  删除餐桌 -->
+		<action name="deleteTable" class="com.web.action.TablesAction" method="deleteTable">
+		</action>
+		
+		<!--  检查餐桌名称是否存在 -->
+		<action name="checkTable_NameExist" class="com.web.action.TablesAction" method="checkTable_NameExist">
+		</action>
+		
+	</package>
+	
+	<package name="helps"  namespace="/helpDocuments" extends="struts-default" >
+		<!-- 餐桌信息页面管理 -->
+		<action name="openHelpDocument" class="com.web.action.HelpAction" method="openHelpDocument">
+		</action>
+	</package>
+	
+	<package name="clients"  namespace="/client" extends="struts-default" >
+	
+		<!-- 服务员登录-->
+		<action name="waiterLogin" class="com.client.action.WaiterAction" method="waiterLogin">
+		</action>
+		
+		<!-- 客户端获取所有菜谱类型的信息 -->
+		<action name="getMenuTypeList" class="com.client.action.MenuTypeAction" method="getMenuTypeList">
+		</action>
+		
+		<!-- 客户端获取所有菜谱的信息 -->
+		<action name="getMenuList" class="com.client.action.MenuAction" method="getMenuList">
+		</action>
+		
+		<!-- 客户端获取所有餐桌的信息 -->
+		<action name="getTableList" class="com.client.action.TablesAction" method="getTableList">
+		</action>
+		
+		<!-- 采集客户端发送的订单信息 -->
+		<action name="collectOrder" class="com.client.action.OrderAction" method="collectOrder">
+		</action>
+		
+		<!-- 采集客户端发送的菜单详细信息 -->
+		<action name="collectOrderItem" class="com.client.action.OrderItemAction" method="collectOrderItem">
+		</action>
+			<!-- 采集客户端发送的菜单详细信息 -->
+		<action name="getOrderItem" class="com.client.action.TestTablesAction" method="getTestJson">
+		</action>
+		
+		<action name="getSearchResult" class="com.client.action.TestTablesAction" method="doSearch">
+		</action>
+	</package>
+	<package name="orders" namespace="/orderItem" extends="struts-default">
+		<!--根据orderId得到OrderItem -->
+		<action name="getOrderItemForm" class="com.client.action.OrderItemAction" method="getOrderItemForm">
+		<result name="success">/menu.jsp</result>
+		</action>
+		
+		<action name="getOrderItemFormForCounter" class="com.client.action.OrderItemAction" method="getOrderItemFormForCounter">
+		<result name="success">/counter.jsp</result>
+		</action>
+		
+		<action name="deleteOrderItem" class="com.client.action.OrderItemAction" method="deleteOrderItem">		
+		<!-- <result name="success">/menu.jsp</result> -->
+		</action>
+
+		<action name="updateOrders" class="com.client.action.OrderAction" method="OrderAction">
+		</action>
+	</package>
+</struts>

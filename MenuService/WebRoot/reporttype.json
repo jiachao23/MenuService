@@ -1,0 +1,17 @@
+[{
+	"value":"f20",
+	"text":"Firefox 2.0 or higher",
+	"group":"日报表"
+},{
+	"value":"f15",
+	"text":"Firefox 1.5.x",
+	"group":"日报表"
+},{
+	"value":"ie7",
+	"text":"Microsoft Internet Explorer 7.0 or higher",
+	"group":"月报表"
+},{
+	"value":"ie6",
+	"text":"Microsoft Internet Explorer 6.x",
+	"group":"月报表"
+}]

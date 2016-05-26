@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+table{
+	width:1024px;
+	
+}
+#tr_top{
+	width:1024px;
+	height:90px;
+	background:url(images/flower.gif) no-repeat;
+}
+#tr_middle{
+	width:1024px;
+	height:584px;
+	background:url(images/middle_bg.gif) no-repeat;
+	text-align:center;
+    vertical-align:top;
+    /*word-break:break-all;*/
+    /*word-wrap:break-word;*/ 
+   	/*自动出现滚动条*/
+   	
+  	/*超出div部份则自动隐藏*/
+    /*overflow-x:hidden;*/
+ 	 /*div自动出现垂直滚动条*/
+    /*overflow-y:auto;*/
+}
+#tr_bottom{
+	width:1024px;
+	height:90px;
+	background:url(images/flower.gif) no-repeat;
+}
+#img_idle{
+	display:block;
+	height:50px;
+	width:50px;
+	background:url(images/desk_idle.png)  no-repeat;
+	background-size:contain;
+}
+#img_busy{
+	display:block;
+	height:50px;
+	width:50px;
+	background:url(images/desk_busy.png) no-repeat;
+	background-size:contain;
+}
+#img_booked{
+	display:block;
+	height:50px;
+	width:50px;
+	background:url(images/desk_book.png) left no-repeat;
+}
+#divTable{
+	width:600;
+    height:400;
+    margin:6%;
+    text-align:center;
+    
+    /*word-break:break-all;*/
+    /*word-wrap:break-word;*/ 
+   	overflow:auto;/*自动出现滚动条*/
+  	/*超出div部份则自动隐藏*/
+    /*overflow-x:hidden;*/
+ 	 /*div自动出现垂直滚动条*/
+    overflow-y:auto;
+}
